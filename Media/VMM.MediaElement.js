@@ -93,7 +93,7 @@ if(typeof VMM != 'undefined' && typeof VMM.MediaElement == 'undefined') {
 			} 
 		},
 		
-		create: function(data, uid) {
+		create: function(data, uid, config) {
 			var _valid = false,
 				//loading_messege			=	"<span class='messege'><p>" + VMM.master_config.language.messages.loading + "</p></span>";
 				loading_messege			=	VMM.MediaElement.loadingmessage(VMM.master_config.language.messages.loading + "...");
@@ -103,6 +103,7 @@ if(typeof VMM != 'undefined' && typeof VMM.MediaElement == 'undefined') {
 				
 				m = VMM.MediaType(data.media); //returns an object with .type and .id
 				m.uid = uid;
+				m.config = config || {};
 				_valid = true;
 				
 			// CREDIT

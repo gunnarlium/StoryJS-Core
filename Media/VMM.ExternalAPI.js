@@ -1328,8 +1328,8 @@ if(typeof VMM != 'undefined' && typeof VMM.ExternalAPI == 'undefined') {
 				}
 				
 				p.player[m.id] = new YT.Player(m.uid, {
-					height: 				'390',
-					width: 					'640',
+					height: 				m.config.height || '390',
+					width: 					m.config.width || '640',
 					playerVars: {
 						enablejsapi:		1,
 						color: 				'white',
